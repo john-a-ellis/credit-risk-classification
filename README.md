@@ -19,7 +19,7 @@ The purpose of this analysis is to create a model which can correctly predict th
 5. The resulting data was then assessed with three modelling approaches:
    - Logistic Regression
    - Support Vector Machine
-   - [Decision Tree](resources/loans_tree.png)
+   - [Decision Tree](https://github.com/john-a-ellis/credit-risk-classification/blob/main/Resources/loans_tree.png)
   
 
 ## Results
