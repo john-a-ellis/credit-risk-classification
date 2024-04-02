@@ -37,9 +37,9 @@ The three models yielded relatively consistent results, with the Logistic Regres
 
 ## Chosen Model Logistic Regression Model
         	Predicted Healthy-0	Predicted Fraud-1
-`Healthy-0	       18652	            113`
-`Fraudulent-1	      10	            609`  
-`Accuracy Score : 0.9936545604622369`
+`Healthy-0	       18652	            113`  
+`Fraudulent-1	      10	            609`      
+`Accuracy Score : 0.9936545604622369`  
 
                         Classification Report
               precision    recall  f1-score   support
