@@ -24,10 +24,10 @@ The purpose of this analysis is to create a model which can correctly predict th
 
 ## Results
             LogisticRegression      Support Vector Machine       Decision Tree
-`Precision:        .84                         .84                     .84`
-`Recall:           .98                         .98                     .85`
-`f1-score:         .91                         .91                     .85`
-`accuracy:         .99                         .99                     .99`
+`Precision:        .84                         .84                     .84`  
+`Recall:           .98                         .98                     .85`  
+`f1-score:         .91                         .91                     .85`  
+`accuracy:         .99                         .99                     .99`  
 
                     
 
@@ -38,7 +38,7 @@ The three models yielded relatively consistent results, with the Logistic Regres
 ## Chosen Model Logistic Regression Model
         	Predicted Healthy-0	Predicted Fraud-1
 `Healthy-0	       18652	            113`
-`Fraudulent-1	      10	            609`
+`Fraudulent-1	      10	            609`  
 `Accuracy Score : 0.9936545604622369`
 
                         Classification Report
@@ -47,8 +47,8 @@ The three models yielded relatively consistent results, with the Logistic Regres
            0       1.00      0.99      1.00     18765
            1       0.84      0.98      0.91       619
 
-`    accuracy                           0.99     19384`
-`   macro avg       0.92      0.99      0.95     19384`
-`weighted avg       0.99      0.99      0.99     19384`
+`    accuracy                           0.99     19384`  
+`   macro avg       0.92      0.99      0.95     19384`  
+`weighted avg       0.99      0.99      0.99     19384`  
 
 At first glance the model appears to be very good at predicting loan health given the 99% accuracy.  However upon closer look this accuracy appears to be greatly influenced by the in-balance in the tested dataset where just over 3% of the observations were fraudulent.  Looking closer we see the model predicted 722 fraudulent loans, but only 609 of these loans were actually fraudulent, for a precision of 84.3%.  Conversely, the model correctly predicted a loan as being fraudulent 98% of the time, 609/619. As a result, if we were to use the model in a production environment using it to predict if a loan is likely to be fraudulent this is a good model.  The risk of model error lies in falsely identifying fraud when none exists which may happen in 16% of the cases.  But the financial implication of this (ie lost business) is offset by the fact it can correctly identify fraud 98% of the time, reducing the risk of writing loans which are unrecoverable due to fraud.  If attempts were to be made to improve the accuracy of the model for identifying healthy loans, care would have to be taken to ensure not to compromise the ability of the model to identify fraudulent loans thereby increasing costs overall. 
